@@ -1,0 +1,120 @@
+.app-footer{
+    background-color: #28418D;
+    color: white;
+    margin-top: 50px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: .5px solid rgba(146, 146, 146, 0.829);
+}
+
+.footer-description{
+    width: 600px;
+}
+
+.footer-description p{
+    text-align: justify;
+}
+
+.footer-item-title{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.footer-item-address{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.important-information{
+    width: 400px;
+}
+
+.app-footer ul i{
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.app-footer .social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.app-footer .social-media span{
+    width: 30px;
+    height: 30px;
+    background-color: var(--yellow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all ease-in-out .2s;
+}
+
+.app-footer .social-media span:hover{
+    background-color: var(--dark-yellow);
+}
+
+.app-footer .input-group{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-footer .input-group input{
+    border: 1px solid lightgrey;
+    height: 48px;
+    width: 250px;
+    border-radius: 20px 0 0 20px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: lightgrey;
+}
+
+.app-footer .input-group button{
+    border: none;
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: 1.05rem;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--yellow);
+    transition: all ease-in-out .2s;
+}
+
+.app-footer .input-group button:hover{
+    background-color: var(--dark-yellow);
+}
+
+.footer-bottom{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

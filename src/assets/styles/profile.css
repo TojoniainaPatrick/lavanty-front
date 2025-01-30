@@ -1,0 +1,73 @@
+.main-page{
+    background-color: white;
+    padding: 20px;
+}
+
+.profile-page-content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+.profile-picture-section{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 20px;
+    gap: 10px;
+}
+
+.profile-picture-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var( --blue-light-active);
+    color: white;
+    padding: 20px;
+    transition: all ease-in-out .2s;
+}
+
+.profile-picture-save-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var( --yellow);
+    color: var( --blue-light-active );
+    padding: 20px;
+    transition: all ease-in-out .2s;
+}
+
+.profile-info-section{
+    flex: .8;
+    overflow-y: scroll !important;
+    padding: 0 50px;
+    height: calc( 100vh - 200px );
+}
+
+.profile-info-section::-webkit-scrollbar{
+    appearance: none;
+    background-color: white;
+    width: 6px;
+}
+
+.profile-info-section::-webkit-scrollbar-thumb{
+    appearance: none;
+    background-color: lightgray;
+    width: 4px;
+    border-radius: 8px;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,51 @@
+.side-bar{
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    background-color: var( --blue );
+}
+
+.side-bar-header{
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+}
+
+.side-bar-header img{
+    object-fit: cover;
+    width: 80%;
+}
+
+.side-bar i{
+    font-size: 1.3rem;
+}
+
+.side-bar a{
+    gap: 15px;
+    color: white;
+    height: 50px;
+    margin: 5px 30px 5px 0;
+    display: flex;
+    font-size: 1.02rem;
+    align-items: center;
+    padding-left: 30px;
+    border-radius: 0 10px 10px 0;
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+}
+
+.side-bar a:hover{
+    background: var(--blue-light-hover);
+    transform: translateX(5px);
+}
+
+.side-bar a.active{
+    border-left: 5px solid white;
+    background: var(--blue-light-active);
+    transform: translateX(5px);
+}

@@ -1,0 +1,53 @@
+.page-content{
+    width: calc( 100vw - 250px );
+    float: right;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+}
+
+.app-page-title{
+    gap: 15px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.03rem;
+    color: var(--blue-light-active);
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.app-page-title i{
+    font-size: 1.2rem;
+}
+
+.app-page-header{
+    gap: 15px;
+    display: flex;
+    margin: 20px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page-body{
+    padding: 50px;
+}
+
+button{
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: lighter;
+}
+
+.blue-button{
+    color: white;
+    background-color: var( --blue-light-active );
+}
+
+.yellow-button{
+    color: var( --blue );
+    background-color: var( --yellow );
+}
