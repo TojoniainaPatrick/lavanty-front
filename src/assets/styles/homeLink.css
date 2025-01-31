@@ -1,0 +1,13 @@
+.home-link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    width: 120px;
+    gap: 5px;
+    font-weight: bolder;
+    color: var(--dark-yellow);
+    margin: 10px 0;
+}

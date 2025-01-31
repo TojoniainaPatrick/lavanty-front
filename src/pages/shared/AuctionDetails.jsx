@@ -8,6 +8,7 @@ import { Image } from "antd"
 import { ImHammer2 } from "react-icons/im";
 import dayjs from "dayjs"
 import Swal from "sweetalert2"
+import HomeLink from "../../components/HomeLink"
 
 export default function AuctionDetails() {
 
@@ -94,6 +95,8 @@ export default function AuctionDetails() {
 
     return(
         <div className="app-auctions">
+
+            <HomeLink />
 
             <AppPageTitle icon = { <BsInfoCircle /> } title = "Detail d'une annonce" />
 

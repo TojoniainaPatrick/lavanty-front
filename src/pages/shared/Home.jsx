@@ -80,22 +80,31 @@ export default function Home() {
 
             <div className="home-page-body">
 
-                <div className="category-card one">
-                    <span className = 'title'> Immobilier </span>
-                    <span className = 'sales'> 49 ventes en cours </span>
-                    <button onClick = { goToAuctions }> Découvrir </button>
+                <div className="category-card">
+                    <div className="card-layer one"></div>
+                    <div className="card-info">
+                        <span className = 'title'> Immobilier </span>
+                        <span className = 'sales'> 49 ventes en cours </span>
+                        <button onClick = { goToAuctions }> Découvrir </button>
+                    </div>
                 </div>
 
-                <div className="category-card two">
-                    <span className = 'title'> Véhicules & Equipements </span>
-                    <span className = 'sales'> 112 ventes en cours </span>
-                    <button onClick = { goToAuctions }> Découvrir </button>
+                <div className="category-card">
+                    <div className="card-layer two"></div>
+                    <div className="card-info">
+                        <span className = 'title'> Véhicules & Equipements </span>
+                        <span className = 'sales'> 112 ventes en cours </span>
+                        <button onClick = { goToAuctions }> Découvrir </button>
+                    </div>
                 </div>
 
-                <div className="category-card three">
-                    <span className = 'title'> Matériels informatiques </span>
-                    <span className = 'sales'> 264 ventes en cours </span>
-                    <button onClick = { goToAuctions }> Découvrir </button>
+                <div className="category-card">
+                    <div className="card-layer three"></div>
+                    <div className="card-info">
+                        <span className = 'title'> Matériels informatiques </span>
+                        <span className = 'sales'> 264 ventes en cours </span>
+                        <button onClick = { goToAuctions }> Découvrir </button>
+                    </div>
                 </div>
 
             </div>
@@ -106,25 +115,25 @@ export default function Home() {
 
             <div className="home-page-section">
 
-                <div className="category-card-alternate">
+                <div className="category-card-alternate" onClick = { goToAuctions }>
                    <i> <FaAnchor size = { 26 } /> </i>
                    <span className='auther-category-title'> Nautisme </span>
                    <span className='auther-category-counts'> 14 articles </span>
                 </div>
 
-                <div className="category-card-alternate">
+                <div className="category-card-alternate" onClick = { goToAuctions }>
                    <i> <CgScreen size = { 26 } /> </i>
                    <span className='auther-category-title'> Multimédia </span>
                    <span className='auther-category-counts'> 52 articles </span>
                 </div>
 
-                <div className="category-card-alternate">
+                <div className="category-card-alternate" onClick = { goToAuctions }>
                    <i> <MdChair size = { 26 } /> </i>
                    <span className='auther-category-title'> Mobilier </span>
                    <span className='auther-category-counts'> 36 articles </span>
                 </div>
 
-                <div className="category-card-alternate">
+                <div className="category-card-alternate" onClick = { goToAuctions }>
                    <i> <FaFootball size = { 26 } /> </i>
                    <span className='auther-category-title'> Sports et Loisirs </span>
                    <span className='auther-category-counts'> 27 articles </span>

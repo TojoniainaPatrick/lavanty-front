@@ -1,4 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
+import {Link} from 'react-router-dom'
 
 export default function ImportantInformation() {
     return(
@@ -9,7 +10,7 @@ export default function ImportantInformation() {
             <div className="footer-item-list">
 
                 <ul>
-                   <li> <i> <MdKeyboardArrowRight /> </i> <span>Accueil</span>  </li>
+                   <li> <Link to = "/"> <i> <MdKeyboardArrowRight /> </i> <span>Accueil</span> </Link>  </li>
                    <li> <i> <MdKeyboardArrowRight /> </i> <span>Politique de Confidentialité</span>  </li>
                    <li> <i> <MdKeyboardArrowRight /> </i> <span>Conditions d’utilisation</span>  </li>
                    <li> <i> <MdKeyboardArrowRight /> </i> <span> Produits et services</span> </li>

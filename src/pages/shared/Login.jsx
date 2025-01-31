@@ -9,6 +9,7 @@ import TextInput from "../../components/input/TextInput"
 import { LiaUserEditSolid } from 'react-icons/lia'
 import { GrLogin } from "react-icons/gr"
 import useAppContext from "../../hooks/useAppContext"
+import HomeLink from "../../components/HomeLink"
 
 
 
@@ -62,6 +63,8 @@ export default function Login(){
 
             <div className="authentication-page">
                 <div className="authentication-container">
+
+                    <HomeLink />
 
                     <div className="logo-container">
                         <img src = { logo } alt = 'Aquatic service logo' width = { 150 } />

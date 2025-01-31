@@ -5,6 +5,7 @@ import Search from "antd/es/input/Search"
 import { Select } from "antd"
 import AppPageTitle from "../../components/AppPageTitle"
 import { GrAnnounce } from "react-icons/gr";
+import HomeLink from "../../components/HomeLink"
 
 export default function AppAuctions() {
 
@@ -37,6 +38,8 @@ export default function AppAuctions() {
 
     return(
         <div className="app-auctions">
+
+            <HomeLink />
 
             <AppPageTitle icon = { <GrAnnounce /> } title = "Annonces" />
 
