@@ -5,6 +5,8 @@ const AppContext = createContext({})
 
 export const AppContextProvider = ({ children }) => {
 
+    const [ user, setUser ] = useState( JSON.parse( localStorage.getItem( 'user' )))
+
     const [ categories, setCategories ] = useState([])
     const [ currentCategory, setCurrentCategory ] = useState({})
     const getCategories = async _ => {
@@ -55,6 +57,9 @@ export const AppContextProvider = ({ children }) => {
 
     return(
         <AppContext.Provider value = {{
+
+            user,
+            setUser,
 
             getCategories,
             categories, setCategories,

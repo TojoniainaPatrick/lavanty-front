@@ -109,7 +109,7 @@ export default function AuctionDetails() {
 
                     <p className="auction-product-description"> { auction?.product?.productDescription } </p>
                     
-                    <span className="auction-product-price"> { auction?.auctionStartingPrice } Ar </span>
+                    <span className="auction-product-price"> { auction?.auctionCurrentPrice ?? auction?.auctionStartingPrice } Ar </span>
 
                     <hr />
 

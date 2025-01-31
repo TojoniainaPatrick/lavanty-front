@@ -14,10 +14,11 @@ import {
 import PasswordInput from "../../components/input/PasswordInput";
 import Swal from "sweetalert2";
 import axios from '../../api/axios'
+import useAppContext from '../../hooks/useAppContext'
 
 export default function Profile() {
 
-    const [ user, setUser ] = useState( JSON.parse( localStorage.getItem( 'user' )))
+    const { user, setUser } = useAppContext()
     const isUserBuyer = user?.userRole?.toString().toLowerCase() == 'acheteur'
 
     const [ formEnabled, setFormEnabled ] = useState( true );

@@ -1,6 +1,8 @@
 .dashboard-page {
     overflow-y: scroll !important;
-    height: calc( 100vh - 140px ) !important;
+    height: calc( 100vh - 130px ) !important;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dashboard-page::-webkit-scrollbar {
@@ -46,5 +48,4 @@
 
 .chart-container{
     height: 400px;
-    width: 100%;
 }

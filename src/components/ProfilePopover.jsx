@@ -4,8 +4,9 @@ import { FaRegCircleUser } from "react-icons/fa6"
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import userDefaultImage from '../assets/images/defaultUserImage.png'
+import useAppContext from '../hooks/useAppContext';
 
-const PopoverContent = ({ profileLink }) => {
+const PopoverContent = ({ userRole }) => {
 
     const navigate = useNavigate()
 
@@ -15,6 +16,7 @@ const PopoverContent = ({ profileLink }) => {
     }
 
     const goToProfile = () => {
+        const profileLink = userRole == 'admin' ? "/admin/profile" : "/app/profile"
         navigate( profileLink )
     }
 
@@ -32,16 +34,13 @@ const PopoverContent = ({ profileLink }) => {
     )
 }
 
-function ProfilePopover({ profileLink }) {
+function ProfilePopover() {
+
+    const {
+        user
+    } = useAppContext()
 
     const [open, setOpen] = useState(false);
-
-    
-    const user = JSON.parse(localStorage.getItem('user')) || {}
-
-    const hide = () => {
-        setOpen(false);
-    };
 
     const handleOpenChange = (newOpen) => {
         setOpen(newOpen);
@@ -49,13 +48,13 @@ function ProfilePopover({ profileLink }) {
 
     return (
         <Popover
-            content={ < PopoverContent profileLink={profileLink} />}
+            content={ < PopoverContent userRole = { user?.userRole } />}
             trigger="click"
             open={open}
             onOpenChange={handleOpenChange}
         >
             <Avatar
-                src = { userDefaultImage }
+                src = { user?.userPictureURl ? user?.userPictureURl : userDefaultImage }
                 size = "large"
                 style={{
                     border: '2px solid var(--blue-light-active)',

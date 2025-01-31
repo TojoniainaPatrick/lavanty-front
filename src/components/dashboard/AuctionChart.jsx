@@ -69,9 +69,9 @@ const AuctionChart = ({ bids }) => {
   };
 
   return (
-    <div>
-      {chartData ? <Line height = { 700 } width = { 1100 } data={chartData} options = { options } /> : <p>Chargement du graphique...</p>}
-    </div>
+    <>
+      {chartData ? <Line width = { 900 } height = { 300 } data={chartData} options = { options } /> : <p>Chargement du graphique...</p>}
+    </>
   );
 };
 

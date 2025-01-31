@@ -9,11 +9,13 @@ import { CgScreen } from "react-icons/cg";
 import { MdChair } from "react-icons/md";
 import { FaFootball } from "react-icons/fa6";
 import { Outlet, useNavigate } from 'react-router-dom'
+import useAppContext from '../../hooks/useAppContext'
 
 
 export const HomeStack = () => {
 
-    const [ user, setUser ] = useState( JSON.parse( localStorage.getItem('user' )))
+    const { user } = useAppContext()
+    const navigate = useNavigate()
 
     return(
         <div className="home-page">
@@ -25,9 +27,9 @@ export const HomeStack = () => {
                 {
                     user
                     ?
-                    <ProfilePopover profileLink="/app/profile" />
+                    <ProfilePopover />
                     :
-                    <button>
+                    <button onClick = { _ => navigate("/login")}>
                         <i> <GrLogin /> </i>
                         <span> Se connecter </span> 
                     </button>
