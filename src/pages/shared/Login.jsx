@@ -8,6 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6"
 import TextInput from "../../components/input/TextInput"
 import { LiaUserEditSolid } from 'react-icons/lia'
 import { GrLogin } from "react-icons/gr"
+import useAppContext from "../../hooks/useAppContext"
 
 
 
@@ -15,6 +16,10 @@ export default function Login(){
 
     const [ userEmail, setUserEmail ] = useState('')
     const [ userPassword, setUserPassword ] = useState('')
+
+    const {
+        setUser
+    } = useAppContext()
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -34,7 +39,7 @@ export default function Login(){
                 let user = response.data.data
                 delete user.userPassword
                 localStorage.setItem('user', JSON.stringify(user))
-                console.log( user )
+                setUser( user )
 
                 if( user?.userRole === 'admin'){
                     const from =  location?.state?.from?.pathname ? location.state.from.pathname : '/admin/dashboard'

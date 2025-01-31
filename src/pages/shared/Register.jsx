@@ -5,11 +5,12 @@ import { Input, message } from 'antd'
 import axios from '../../api/axios'
 import { FaArrowRightLong } from "react-icons/fa6"
 import { LiaUserEditSolid } from "react-icons/lia"
+import useAppContext from "../../hooks/useAppContext"
 
 
 export default function Register(){
 
-    const [ user, setUser ] = useState({
+    const [ newUser, setNewUser ] = useState({
         userName: "",
         userEmail: "",
         userAddress: "",
@@ -17,35 +18,39 @@ export default function Register(){
         userPassword: ""
     })
 
+    const {
+        setUser
+    } = useAppContext()
+
     const navigate = useNavigate()
     const location = useLocation()
 
     const handleSubmit = async () => {
-        if ( !user.userEmail ) {
+        if ( !newUser.userEmail ) {
             message.warning('Veuillez saisir votre adresse mail!')
         }
-        else if ( !user.userName ) {
+        else if ( !newUser.userName ) {
             message.warning('Veuillez saisir votre nom d\'utilisateur!')
         }
-        else if ( !user.userAddress ) {
+        else if ( !newUser.userAddress ) {
             message.warning('Veuillez saisir l\'adresse de votre domicile!')
         }
-        else if ( !user.userPhoneNumber ) {
+        else if ( !newUser.userPhoneNumber ) {
             message.warning('Veuillez saisir le numéro de votre téléphone!')
         }
-        else if ( !user.userPassword ) {
+        else if ( !newUser.userPassword ) {
             message.warning('Veuillez saisir votre mot de passe!')
         }
         else{
             
-            await axios.post('/user/insert',  user )
+            await axios.post('/newUser/insert',  newUser )
             .then( response => {
                 
                 message.success('Inscription réussie!')
-                let user = response.data.data
-                delete user.userPassword
-                localStorage.setItem('user', JSON.stringify(user))
-                console.log( user )
+                let newUser = response.data.data
+                delete newUser.userPassword
+                localStorage.setItem('user', JSON.stringify(newUser))
+                setUser( newUser )
 
                 const from =  location?.state?.from?.pathname ? location.state.from.pathname : '/'
                 navigate(from, {replace: true})
@@ -60,7 +65,7 @@ export default function Register(){
 
     const handleChangeInput = e => {
         const { id, value } = e.target
-        setUser({ ...user, [ id ]: value })
+        setNewUser({ ...newUser, [ id ]: value })
     }
 
     return(
@@ -74,7 +79,7 @@ export default function Register(){
                     </div>
 
                     <Input
-                        value = { user.userEmail }
+                        value = { newUser.userEmail }
                         onChange = { handleChangeInput }
                         id = "userEmail"
                         size = 'large'
@@ -83,7 +88,7 @@ export default function Register(){
                     />
 
                     <Input
-                        value = { user.userName }
+                        value = { newUser.userName }
                         onChange = { handleChangeInput }
                         id = "userName"
                         size = 'large'
@@ -92,7 +97,7 @@ export default function Register(){
                     />
 
                     <Input
-                        value = { user.userAddress }
+                        value = { newUser.userAddress }
                         onChange = { handleChangeInput }
                         id = "userAddress"
                         size = 'large'
@@ -101,7 +106,7 @@ export default function Register(){
                     />
 
                     <Input
-                        value = { user.userPhoneNumber }
+                        value = { newUser.userPhoneNumber }
                         onChange = { event => {
                             if(/^\d{0,12}$/.test( event.target.value )) handleChangeInput( event )
                         }}
@@ -112,7 +117,7 @@ export default function Register(){
                     />
 
                     <Input.Password
-                        value = { user.userPassword }
+                        value = { newUser.userPassword }
                         onChange = { handleChangeInput }
                         id = "userPassword"
                         size = 'large'

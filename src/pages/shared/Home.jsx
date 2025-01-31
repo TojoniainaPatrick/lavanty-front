@@ -2,7 +2,6 @@ import { GrLogin } from 'react-icons/gr'
 import logo from '../../assets/images/blue-logo.jpg'
 import { FaRegStar, FaRegCheckCircle, FaLock } from "react-icons/fa"
 import ProfilePopover from '../../components/ProfilePopover'
-import { useState } from 'react'
 import AppFooter from '../../components/AppFooter'
 import { FaAnchor } from "react-icons/fa";
 import { CgScreen } from "react-icons/cg";
