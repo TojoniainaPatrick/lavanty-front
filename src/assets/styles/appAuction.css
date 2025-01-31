@@ -1,0 +1,80 @@
+.app-auctions{
+    margin: 50px;
+}
+
+.app-auctions-header{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:  20px;
+}
+
+.app-auctions-data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.auction-card{
+    width: 200px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+
+.auction-card img{
+    transition: all ease-in-out .5s;
+    object-fit: contain;
+    width: 100%;
+}
+
+.auction-card:hover img{
+    transform: scale(1.2);
+}
+
+.auction-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+}
+
+.product-name{
+    font-weight: bold;
+    color: var(--blue-light-active);
+}
+
+.product-description{
+    font-size: .8rem;
+    color: gray;
+}
+
+.product-price{
+    font-size: .9rem;
+    color: gray;
+}
+
+.auction-card-info button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--blue-light-active);
+    background-color: var(--yellow);
+    transition: all ease-in-out.2s;
+}
+
+.auction-card-info button:hover{
+    color: white;
+    background-color: var(--blue-light-active);
+}

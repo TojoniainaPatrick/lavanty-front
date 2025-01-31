@@ -1,0 +1,107 @@
+.auction-details{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.auction-product-image{
+    flex: .5;
+}
+
+.auction-product-image img{
+    border-radius: 20px;
+}
+
+.auction-details-section{
+    display: flex;
+    flex: .5;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 50px;
+}
+
+.auction-input-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.auction-input-group input{
+    border: none;
+    height: 50px;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    width: 250px;
+    padding-left: 20px;
+    font-size: 1.05rem;
+    color: gray;
+    outline: none;
+}
+
+.auction-input-group button{
+    border: none;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var( --blue);
+    border: 1px solid var( --blue);
+    background: white;
+    transition: all ease-in-out .2s;
+}
+
+.auction-input-group button:hover{
+    background-color: var( --blue);
+    border: 1px solid var( --blue);
+    color: white;
+}
+
+.auction-product-name{
+    font-weight: bolder;
+    color: var( --blue-light-active);
+    font-size: 2.2rem;
+}
+
+.auction-product-description{
+    font-weight: bold;
+    color: lightgrey;
+    font-size: 1.05rem;
+    padding: 10px 0;
+}
+
+hr{
+    width: 100%;
+}
+
+.auction-product-price{
+    color: gray;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.to-bid span{
+    font-size: 1.5rem;
+    color: gray;
+    font-weight: bold;
+}
+
+.to-bid p{
+    font-size: 1.2rem;
+    color: darkslategray;
+    padding-top: 20px;
+}
+
+.to-bid p a{
+    font-size: 1.2rem;
+    color: var( --blue-light-active);
+    padding-top: 20px;
+    font-weight: bold;
+}

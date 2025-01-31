@@ -8,7 +8,7 @@ import { FaAnchor } from "react-icons/fa";
 import { CgScreen } from "react-icons/cg";
 import { MdChair } from "react-icons/md";
 import { FaFootball } from "react-icons/fa6";
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 
 export const HomeStack = () => {
@@ -47,6 +47,8 @@ export const HomeStack = () => {
 
 export default function Home() {
 
+    const navigate = useNavigate()
+    const goToAuctions = _ => navigate("/app/auctions")
 
     return(
         <>
@@ -80,19 +82,19 @@ export default function Home() {
                 <div className="category-card one">
                     <span className = 'title'> Immobilier </span>
                     <span className = 'sales'> 49 ventes en cours </span>
-                    <button> Découvrir </button>
+                    <button onClick = { goToAuctions }> Découvrir </button>
                 </div>
 
                 <div className="category-card two">
                     <span className = 'title'> Véhicules & Equipements </span>
                     <span className = 'sales'> 112 ventes en cours </span>
-                    <button> Découvrir </button>
+                    <button onClick = { goToAuctions }> Découvrir </button>
                 </div>
 
                 <div className="category-card three">
                     <span className = 'title'> Matériels informatiques </span>
                     <span className = 'sales'> 264 ventes en cours </span>
-                    <button> Découvrir </button>
+                    <button onClick = { goToAuctions }> Découvrir </button>
                 </div>
 
             </div>

@@ -1,0 +1,50 @@
+.dashboard-page {
+    overflow-y: scroll !important;
+    height: calc( 100vh - 140px ) !important;
+}
+
+.dashboard-page::-webkit-scrollbar {
+    appearance: none;
+    display: none;
+}
+
+.dashboard-page::-webkit-scrollbar-thumb {
+    appearance: none;
+    display: none;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.dashboard-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 10px;
+    width: 170px;
+    border-radius: 5px;
+    border: 1px solid var( --blue-light-active );
+}
+
+.dashboard-card .title{
+    color: var(--blue-light-active);
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.dashboard-card .value{
+    color: var(--blue-light-active);
+    font-size: 1.02rem;
+}
+
+.chart-container{
+    height: 400px;
+    width: 100%;
+}

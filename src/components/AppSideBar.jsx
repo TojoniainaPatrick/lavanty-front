@@ -1,12 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import blueLogo from '../assets/images/blue-logo.jpg'
-import { AiFillAndroid } from 'react-icons/ai'
-import { BiCategory } from 'react-icons/bi'
 import { MdDashboard, MdOutlineCategory, MdOutlineSell } from 'react-icons/md'
 import { IoMdCart } from "react-icons/io";
 import { GrAnnounce } from "react-icons/gr";
-import { TbShoppingCartDollar } from "react-icons/tb"
 import { FaUsersBetweenLines } from "react-icons/fa6";
+import { ImHammer2 } from 'react-icons/im';
 
 export default function AppSideBar () {
     return(
@@ -48,7 +46,7 @@ export default function AppSideBar () {
                     </li>
                     <li>
                         <NavLink to = "/admin/bids">
-                            <i> <TbShoppingCartDollar /> </i>
+                            <i> <ImHammer2 /> </i>
                             <span> Enchères </span>
                         </NavLink>
                     </li>

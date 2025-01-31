@@ -137,10 +137,16 @@ export default function NewAuction(){
                     showSearch
                     options = {
                         [{ label: 'Selectionnez la un produit', value: ''}]
-                        .concat( products.map( product => ({
-                            label: product.productName,
-                            value: product.productId
-                        })))
+                        .concat(
+                            products
+                            .filter( product =>
+                                product.productStatus == 'disponible'
+                            )
+                            .map( product => ({
+                                label: product.productName,
+                                value: product.productId
+                            }))
+                        )
                     }
                     onChange = { value => setAuction({ ...auction, productId: value }) }
                     value = { auction.productId || '' }

@@ -3,6 +3,8 @@ import useAppContext from "../../hooks/useAppContext"
 import AuctionCard from "../../components/auction/AuctionCard"
 import Search from "antd/es/input/Search"
 import { Select } from "antd"
+import AppPageTitle from "../../components/AppPageTitle"
+import { GrAnnounce } from "react-icons/gr";
 
 export default function AppAuctions() {
 
@@ -36,20 +38,21 @@ export default function AppAuctions() {
     return(
         <div className="app-auctions">
 
+            <AppPageTitle icon = { <GrAnnounce /> } title = "Annonces" />
+
             <div className="app-auctions-header">
 
                 <Select
                     placeholder = "Catégorie"
                     showSearch
                     options = {
-                        [{ label: 'Toutes les catégories', value: null }]
+                        [{ label: 'Toutes les catégories', value: '' }]
                         .concat( categories.map( category => ({
                             label: category.categoryName,
                             value: category.categoryId
                         })))
                     }
                     onChange = { value => setSelectedCategory( value ) }
-                    value = { selectedCategory || '' }
                     style={{ width: 250 }}
                 />
 

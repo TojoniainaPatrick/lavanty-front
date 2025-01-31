@@ -10,6 +10,7 @@ import axios from "../../api/axios";
 import { auctionsTableColumns } from "../../constant/tableColumns";
 import { GrAnnounce } from "react-icons/gr";
 import dayjs from "dayjs";
+import { ImHammer2 } from "react-icons/im";
 
 export default function Bids() {
 
@@ -80,7 +81,7 @@ export default function Bids() {
         <>
             <div className="bids-page main-page">
 
-                <AppPageTitle icon = { <GrAnnounce /> } title = "Enchères" />
+                <AppPageTitle icon = { <ImHammer2 /> } title = "Enchères" />
 
                 <div className="app-page-header">
                     <Search
